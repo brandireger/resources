@@ -28,15 +28,8 @@ window.ITEMS = [
   "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1006&context=early_visions_bucket",
   "comp": "excerpt",
   "pages": 7,
-  "cnote": "One chapter of Oviedo's text plus a bracketed summary of the rest (per the item's own intro).",
-  "fullText": [
-   {
-    "label": "Catalog: Cabeza de Vaca narrative ed. Bannon, with Theisen's translation of Oviedo's Joint Report",
-    "url": "https://catalog.hathitrust.org/Record/000024761",
-    "conf": 40,
-    "note": "Catalog record only; I did not check whether it is viewable. No free full text of Oviedo Book XXXV in English found."
-   }
-  ]
+  "cnote": "One chapter of Oviedo's text plus a bracketed summary of the rest (per the item's own intro). No free English full text of Oviedo Book XXXV found. In print: Cabeza de Vaca narrative ed. Bannon, with Theisen's translation of Oviedo's version.",
+  "fullText": []
  },
  {
   "id": 5,
@@ -290,15 +283,8 @@ window.ITEMS = [
   "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1015&context=early_visions_bucket",
   "comp": "excerpt",
   "pages": 10,
-  "cnote": "Excerpts of the prose Discours plus two poems.",
-  "fullText": [
-   {
-    "label": "1579 French edition scan (Utrecht Univ. Library)",
-    "url": "https://objects.library.uu.nl/reader/1874-430010/metadata?lan=en",
-    "conf": 65,
-    "note": "French; I saw the catalog record, not the page images."
-   }
-  ]
+  "cnote": "A 1579 French edition is catalogued at Utrecht University Library; I found no readable link. Excerpts of the prose Discours plus two poems.",
+  "fullText": []
  },
  {
   "id": 19,
@@ -313,14 +299,8 @@ window.ITEMS = [
   "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1018&context=early_visions_bucket",
   "comp": "excerpt",
   "pages": 8,
-  "cnote": "",
+  "cnote": "Hakluyt's 1587 English translation exists in the Oxford Text Archive, but I found no readable link.",
   "fullText": [
-   {
-    "label": "Hakluyt 1587 English (Oxford Text Archive record)",
-    "url": "https://oer.tamiu.edu/itemRecord.php?id=170288",
-    "conf": 50,
-    "note": "Catalog page for the TCP text; text itself not opened."
-   },
    {
     "label": "French edition, Paris 1853 (Library of Congress)",
     "url": "https://www.loc.gov/item/2021667019/",
