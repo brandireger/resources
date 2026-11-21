@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Early Visions of Florida — Reading Tracker</title>
+<style>
+:root{
+  --bg:#14110d; --panel:#1d1913; --panel2:#262017; --line:#3a3226; --ink:#eadfc8; --dim:#a89c82;
+  --gold:#d8a94a; --teal:#5fb3a1; --rust:#c8654a; --plum:#a57bb8;
+}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(1200px 600px at 80% -10%,#2a2113 0,transparent 60%),var(--bg);color:var(--ink);
+  font:16px/1.55 Georgia,"Iowan Old Style",Palatino,serif}
+a{color:var(--teal)}
+header{padding:28px 20px 12px;max-width:1100px;margin:0 auto}
+h1{margin:0 0 4px;font-size:1.9rem;letter-spacing:.02em;color:var(--gold)}
+.sub{color:var(--dim);margin:0 0 14px;font-size:.95rem}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px 60px}
+.tabs{display:flex;gap:6px;margin:10px 0 16px;border-bottom:1px solid var(--line)}
+.tab{background:none;border:0;color:var(--dim);padding:10px 16px;cursor:pointer;font:inherit;border-bottom:2px solid transparent}
+.tab.on{color:var(--gold);border-color:var(--gold)}
+.stats{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:12px}
+.bar{flex:1 1 260px;height:10px;background:var(--panel2);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.bar>i{display:block;height:100%;background:linear-gradient(90deg,var(--teal),var(--gold));width:0}
+.stat{font-size:.9rem;color:var(--dim)}
+.stat b{color:var(--ink)}
+.controls{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+input,select,textarea,button{font:inherit;color:var(--ink);background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:7px 10px}
+input[type=search]{flex:1 1 220px}
+button{cursor:pointer}
+button:hover{border-color:var(--gold)}
+.cards{display:grid;gap:12px}
+.card{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--line);border-radius:8px;padding:14px 16px}
+.card.A{border-left-color:var(--gold)} .card.B{border-left-color:var(--teal)} .card.C{border-left-color:var(--plum)}
+.card.read{opacity:.78}
+.card.read h3{text-decoration:line-through;text-decoration-color:var(--dim)}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.year{font:600 .8rem/1 system-ui,sans-serif;background:var(--panel2);border:1px solid var(--line);padding:4px 8px;border-radius:12px;color:var(--gold)}
+.chip{font:.72rem/1 system-ui,sans-serif;padding:4px 8px;border-radius:12px;border:1px solid var(--line);color:var(--dim)}
+.chip.A{color:var(--gold)} .chip.B{color:var(--teal)} .chip.C{color:var(--plum)}
+h3{margin:8px 0 2px;font-size:1.08rem}
+.by{color:var(--dim);font-size:.9rem}
+.why{margin:6px 0 8px;font-size:.92rem;color:#cfc3a9}
+.links a{margin-right:14px;font-size:.9rem}
+.star{background:none;border:0;font-size:1.2rem;padding:0 4px;color:var(--dim)}
+.star.on{color:var(--gold)}
+details{margin-top:10px;border-top:1px dashed var(--line);padding-top:8px}
+summary{cursor:pointer;color:var(--dim);font-size:.9rem}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px}
+@media(max-width:700px){.grid2{grid-template-columns:1fr}}
+label{display:block;font-size:.8rem;color:var(--dim);margin:6px 0 2px}
+textarea{width:100%;min-height:90px;resize:vertical}
+.full{width:100%}
+.small{font-size:.8rem;color:var(--dim)}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:16px;margin-bottom:14px}
+.panel h2{margin:0 0 6px;font-size:1.1rem;color:var(--gold)}
+.hidden{display:none}
+.toast{position:fixed;bottom:18px;right:18px;background:var(--panel2);border:1px solid var(--gold);padding:8px 12px;border-radius:6px;opacity:0;transition:.25s;pointer-events:none}
+.toast.on{opacity:1}
+</style>
+</head>
+<body>
+<header>
+  <h1>Early Visions of Florida — Reading Tracker</h1>
+  <p class="sub">50 primary-source excerpts from USF's <a href="https://digitalcommons.usf.edu/early_visions_bucket/" target="_blank" rel="noopener">Early Visions of Florida</a> collection. Track what you've read, keep notes, and export them.</p>
+</header>
+<div class="wrap">
+  <div class="tabs">
+    <button class="tab on" data-tab="list">Reading list</button>
+    <button class="tab" data-tab="log">Research log</button>
+    <button class="tab" data-tab="about">About &amp; caveats</button>
+  </div>
+
+  <section id="tab-list">
+    <div class="stats">
+      <div class="bar"><i id="barfill"></i></div>
+      <span class="stat"><b id="sRead">0</b> read · <b id="sReading">0</b> reading · <b id="sTotal">0</b> shown</span>
+      <span class="stat">Core tier: <b id="sCore">0/0</b></span>
+    </div>
+    <div class="controls">
+      <input type="search" id="q" placeholder="Search title, author, notes, peoples...">
+      <select id="fTier"><option value="">All tiers</option><option value="A">A · Core (Indigenous peoples)</option><option value="B">B · Context</option><option value="C">C · Literature &amp; reception</option></select>
+      <select id="fStatus"><option value="">Any status</option><option value="unread">Unread</option><option value="reading">Reading</option><option value="read">Read</option><option value="star">Starred</option></select>
+      <select id="sort"><option value="old">Oldest first</option><option value="new">Newest first</option><option value="tier">Tier, then oldest</option></select>
+      <button id="btnExport">Export notes</button>
+      <button id="btnImport">Import</button>
+      <input type="file" id="fileImport" accept="application/json" class="hidden">
+    </div>
+    <div class="cards" id="cards"></div>
+  </section>
+
+  <section id="tab-log" class="hidden">
+    <div class="panel"><h2>Research log</h2>
+      <p class="small">Free-form notes, themes and connections across texts. Saved in this browser.</p>
+      <textarea id="logText" style="min-height:220px" placeholder="Patterns, comparisons, hypotheses..."></textarea></div>
+    <div class="panel"><h2>Questions to chase</h2>
+      <textarea id="questions" placeholder="One per line"></textarea></div>
+    <div class="panel"><h2>Comparison prompts</h2>
+      <ul>
+        <li>How do the French (Ribault, Laudonnière, Le Challeux) and Spanish (Fontaneda, Pareja, Oré) accounts of the Timucua differ?</li>
+        <li>Which texts were written by or with Indigenous people (e.g., the Hinachuba petition, Pareja's co-authored Timucua texts)?</li>
+        <li>Compare William Bartram's 1774 report with his 1791 Travels.</li>
+        <li>Who is the source: eyewitness, informant, or compiler? Record it in each item's notes.</li>
+      </ul></div>
+  </section>
+
+  <section id="tab-about" class="hidden">
+    <div class="panel"><h2>Caveats</h2>
+      <ul>
+        <li><b>Years</b> are as listed on the USF page; they may be publication or event dates, not both (for example, the Cabeza de Vaca joint report is filed under 1527).</li>
+        <li><b>Tiers</b> (A/B/C) are a triage for researching Indigenous peoples and their relationships. They are not part of USF's catalog and can be wrong.</li>
+        <li><b>Contributors</b> are the other names listed on each USF record. They look like editors, translators or student introducers; check the PDF.</li>
+        <li>Each text is an excerpt, mostly European-authored. Consider who is speaking and for whom.</li>
+        <li>Notes are stored in your browser only (localStorage). Use <b>Export notes</b> to back them up or move between devices.</li>
+      </ul></div>
+  </section>
+</div>
+<div class="toast" id="toast"></div>
+
+<script src="data.js"></script>
+<script>
+(function(){
+  var KEY="evf-tracker-v1";
+  var state={items:{},log:"",questions:""};
+  function load(){try{var s=localStorage.getItem(KEY);if(s){state=Object.assign(state,JSON.parse(s));}}catch(e){}}
+  function save(){try{localStorage.setItem(KEY,JSON.stringify(state));}catch(e){toast("Could not save in this browser; use Export.");}}
+  function toast(m){var t=document.getElementById("toast");t.textContent=m;t.className="toast on";setTimeout(function(){t.className="toast";},1800);}
+  function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];});}
+  function st(id){return state.items[id]||(state.items[id]={status:"unread",star:false,notes:"",peoples:"",quotes:"",conf:""});}
+  var tierName={A:"A · Core",B:"B · Context",C:"C · Literature"};
+  var $=function(id){return document.getElementById(id);};
+
+  function cite(it){
+    return it.author+". “"+it.title+".” "+(it.contrib?"Contributors listed by USF: "+it.contrib+". ":"")+
+      "Early Visions of Florida, USF Digital Commons ("+it.year+" as listed). "+it.page;
+  }
+  function filtered(){
+    var q=$("q").value.toLowerCase().trim(), ft=$("fTier").value, fs=$("fStatus").value, so=$("sort").value;
+    var out=window.ITEMS.filter(function(it){
+      var s=st(it.id);
+      if(ft&&it.tier!==ft)return false;
+      if(fs==="star"){if(!s.star)return false;} else if(fs&&s.status!==fs)return false;
+      if(q){var hay=(it.title+" "+it.author+" "+it.contrib+" "+it.why+" "+s.notes+" "+s.peoples+" "+s.quotes).toLowerCase();if(hay.indexOf(q)<0)return false;}
+      return true;
+    });
+    out.sort(function(a,b){
+      if(so==="new")return b.year-a.year||b.id-a.id;
+      if(so==="tier")return a.tier.localeCompare(b.tier)||a.year-b.year;
+      return a.year-b.year||a.id-b.id;
+    });
+    return out;
+  }
+  function stats(list){
+    var all=window.ITEMS,r=0,g=0,cr=0,ct=0;
+    all.forEach(function(it){var s=st(it.id);if(s.status==="read")r++;if(s.status==="reading")g++;if(it.tier==="A"){ct++;if(s.status==="read")cr++;}});
+    $("sRead").textContent=r;$("sReading").textContent=g;$("sTotal").textContent=list.length+"/"+all.length;
+    $("sCore").textContent=cr+"/"+ct;$("barfill").style.width=(100*r/all.length)+"%";
+  }
+  function render(){
+    var list=filtered(),box=$("cards");
+    box.innerHTML=list.map(function(it){
+      var s=st(it.id);
+      return '<article class="card '+it.tier+(s.status==="read"?" read":"")+'" data-id="'+it.id+'">'+
+        '<div class="row"><span class="year">'+it.year+'</span><span class="chip '+it.tier+'">'+tierName[it.tier]+'</span><span class="chip">'+esc(it.genre)+'</span>'+
+        '<span style="flex:1"></span>'+
+        '<button class="star'+(s.star?" on":"")+'" data-act="star" title="Star">★</button>'+
+        '<select data-act="status"><option value="unread"'+(s.status==="unread"?" selected":"")+'>Unread</option><option value="reading"'+(s.status==="reading"?" selected":"")+'>Reading</option><option value="read"'+(s.status==="read"?" selected":"")+'>Read</option></select></div>'+
+        '<h3>'+esc(it.title)+'</h3><div class="by">'+esc(it.author)+(it.contrib?' · <span class="small">with '+esc(it.contrib)+'</span>':'')+'</div>'+
+        '<p class="why">'+esc(it.why)+'</p>'+
+        '<div class="links"><a href="'+it.page+'" target="_blank" rel="noopener">Item page</a><a href="'+it.pdf+'" target="_blank" rel="noopener">PDF</a><a href="#" data-act="cite">Copy citation</a></div>'+
+        '<details'+((s.notes||s.peoples||s.quotes||s.conf)?' open':'')+'><summary>Notes'+((s.notes||s.peoples||s.quotes)?' •':'')+'</summary>'+
+        '<div class="grid2"><div><label>Peoples / places named</label><input class="full" data-f="peoples" value="'+esc(s.peoples)+'" placeholder="e.g., Timucua, Calusa"></div>'+
+        '<div><label>Confidence in source reliability (0–100%)</label><input class="full" data-f="conf" type="number" min="0" max="100" value="'+esc(s.conf)+'"></div></div>'+
+        '<label>Notes</label><textarea data-f="notes" placeholder="Who is speaking? Eyewitness or secondhand? Key claims...">'+esc(s.notes)+'</textarea>'+
+        '<label>Short quotes with page (keep under 15 words each)</label><textarea data-f="quotes" style="min-height:60px">'+esc(s.quotes)+'</textarea>'+
+        '</details></article>';
+    }).join("")||'<p class="small">No items match.</p>';
+    stats(list);
+  }
+  $("cards").addEventListener("click",function(e){
+    var card=e.target.closest(".card");if(!card)return;
+    var id=+card.getAttribute("data-id"),act=e.target.getAttribute("data-act"),s=st(id);
+    if(act==="star"){s.star=!s.star;save();render();}
+    if(act==="cite"){e.preventDefault();var it=window.ITEMS.filter(function(x){return x.id===id;})[0];
+      if(navigator.clipboard){navigator.clipboard.writeText(cite(it)).then(function(){toast("Citation copied");},function(){toast("Copy failed");});}}
+  });
+  $("cards").addEventListener("change",function(e){
+    var card=e.target.closest(".card");if(!card)return;
+    if(e.target.getAttribute("data-act")==="status"){st(+card.getAttribute("data-id")).status=e.target.value;save();render();}
+  });
+  $("cards").addEventListener("input",function(e){
+    var f=e.target.getAttribute("data-f");if(!f)return;
+    var card=e.target.closest(".card");st(+card.getAttribute("data-id"))[f]=e.target.value;save();stats(filtered());
+  });
+  ["q","fTier","fStatus","sort"].forEach(function(id){$(id).addEventListener("input",render);});
+  $("logText").addEventListener("input",function(e){state.log=e.target.value;save();});
+  $("questions").addEventListener("input",function(e){state.questions=e.target.value;save();});
+  document.querySelectorAll(".tab").forEach(function(b){b.addEventListener("click",function(){
+    document.querySelectorAll(".tab").forEach(function(x){x.classList.toggle("on",x===b);});
+    ["list","log","about"].forEach(function(n){$("tab-"+n).classList.toggle("hidden",n!==b.getAttribute("data-tab"));});
+  });});
+  $("btnExport").addEventListener("click",function(){
+    var blob=new Blob([JSON.stringify(state,null,2)],{type:"application/json"});
+    var a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="early-visions-notes.json";a.click();
+    setTimeout(function(){URL.revokeObjectURL(a.href);},500);
+  });
+  $("btnImport").addEventListener("click",function(){$("fileImport").click();});
+  $("fileImport").addEventListener("change",function(e){
+    var f=e.target.files[0];if(!f)return;var r=new FileReader();
+    r.onload=function(){try{var d=JSON.parse(r.result);if(d&&d.items){state=Object.assign({items:{},log:"",questions:""},d);save();$("logText").value=state.log||"";$("questions").value=state.questions||"";render();toast("Imported");}else{toast("Not a valid export");}}catch(x){toast("Could not read file");}};
+    r.readAsText(f);
+  });
+  load();$("logText").value=state.log||"";$("questions").value=state.questions||"";render();
+})();
+</script>
+</body>
+</html>
