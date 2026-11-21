@@ -9,7 +9,11 @@ window.ITEMS = [
   "tier": "C",
   "why": "Early verse.",
   "page": "https://digitalcommons.usf.edu/early_visions_bucket/1",
-  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1000&context=early_visions_bucket"
+  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1000&context=early_visions_bucket",
+  "comp": "unlabeled",
+  "pages": null,
+  "cnote": "",
+  "fullText": []
  },
  {
   "id": 7,
@@ -21,7 +25,18 @@ window.ITEMS = [
   "tier": "A",
   "why": "Survivors' joint report; compare with Cabeza de Vaca's Relacion.",
   "page": "https://digitalcommons.usf.edu/early_visions_bucket/7",
-  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1006&context=early_visions_bucket"
+  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1006&context=early_visions_bucket",
+  "comp": "excerpt",
+  "pages": 7,
+  "cnote": "One chapter of Oviedo's text plus a bracketed summary of the rest (per the item's own intro).",
+  "fullText": [
+   {
+    "label": "Catalog: Cabeza de Vaca narrative ed. Bannon, with Theisen's translation of Oviedo's Joint Report",
+    "url": "https://catalog.hathitrust.org/Record/000024761",
+    "conf": 40,
+    "note": "Catalog record only; I did not check whether it is viewable. No free full text of Oviedo Book XXXV in English found."
+   }
+  ]
  },
  {
   "id": 5,
@@ -33,7 +48,18 @@ window.ITEMS = [
   "tier": "B",
   "why": "Secondhand compilation from informants.",
   "page": "https://digitalcommons.usf.edu/early_visions_bucket/5",
-  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1004&context=early_visions_bucket"
+  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1004&context=early_visions_bucket",
+  "comp": "excerpt",
+  "pages": 5,
+  "cnote": "",
+  "fullText": [
+   {
+    "label": "MacNutt translation, vol. 1 (Project Gutenberg #12425)",
+    "url": "https://www.gutenberg.org/ebooks/12425",
+    "conf": 90,
+    "note": "Volume 1 only was checked; the Florida material may be in vol. 2."
+   }
+  ]
  },
  {
   "id": 8,
@@ -45,7 +71,24 @@ window.ITEMS = [
   "tier": "A",
   "why": "Narvaez expedition; years among Gulf Coast peoples.",
   "page": "https://digitalcommons.usf.edu/early_visions_bucket/8",
-  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1007&context=early_visions_bucket"
+  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1007&context=early_visions_bucket",
+  "comp": "excerpt",
+  "pages": 11,
+  "cnote": "",
+  "fullText": [
+   {
+    "label": "Bandelier translation, whole (Project Gutenberg #79896)",
+    "url": "https://www.gutenberg.org/ebooks/79896",
+    "conf": 90,
+    "note": "Same translator as the USF item."
+   },
+   {
+    "label": "1555 edition with translation (Texas State University)",
+    "url": "https://exhibits.library.txstate.edu/s/cabeza/page/la-relaci--n",
+    "conf": 85,
+    "note": "All 38 chapters of the 1555 edition, per the exhibit."
+   }
+  ]
  },
  {
   "id": 10,
@@ -57,7 +100,24 @@ window.ITEMS = [
   "tier": "A",
   "why": "Participant account of the De Soto expedition.",
   "page": "https://digitalcommons.usf.edu/early_visions_bucket/10",
-  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1009&context=early_visions_bucket"
+  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1009&context=early_visions_bucket",
+  "comp": "excerpt",
+  "pages": 9,
+  "cnote": "",
+  "fullText": [
+   {
+    "label": "Hakluyt 1609 translation, whole (Project Gutenberg #34997)",
+    "url": "https://www.gutenberg.org/ebooks/34997",
+    "conf": 90,
+    "note": ""
+   },
+   {
+    "label": "Buckingham Smith translation (EADA, Univ. of Maryland)",
+    "url": "https://eada.lib.umd.edu/text-entries/true-relation-of-the-vicissitudes-that-attended-the-governor-don-hernando-de-soto-and-some-nobles-of-portugal-in-the-discovery-of-the-province-of-florida-now-just-given-by-a-fidalgo-of-elvas-viewed-by",
+    "conf": 85,
+    "note": ""
+   }
+  ]
  },
  {
   "id": 22,
@@ -69,7 +129,24 @@ window.ITEMS = [
   "tier": "A",
   "why": "French 1562 voyage; first meetings with the Timucua.",
   "page": "https://digitalcommons.usf.edu/early_visions_bucket/22",
-  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1021&context=early_visions_bucket"
+  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1021&context=early_visions_bucket",
+  "comp": "excerpt",
+  "pages": 8,
+  "cnote": "",
+  "fullText": [
+   {
+    "label": "1563 English text (Oxford Text Archive, EEBO-TCP)",
+    "url": "https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/A10692",
+    "conf": 85,
+    "note": "CC0 transcription."
+   },
+   {
+    "label": "Transcription with notes (thenewworld.us)",
+    "url": "https://thenewworld.us/?p=667",
+    "conf": 80,
+    "note": "From the British Museum manuscript copy."
+   }
+  ]
  },
  {
   "id": 23,
@@ -81,7 +158,11 @@ window.ITEMS = [
   "tier": "C",
   "why": "Literary.",
   "page": "https://digitalcommons.usf.edu/early_visions_bucket/23",
-  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1022&context=early_visions_bucket"
+  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1022&context=early_visions_bucket",
+  "comp": "unlabeled",
+  "pages": null,
+  "cnote": "",
+  "fullText": []
  },
  {
   "id": 15,
@@ -93,7 +174,11 @@ window.ITEMS = [
   "tier": "B",
   "why": "Spanish administrative document.",
   "page": "https://digitalcommons.usf.edu/early_visions_bucket/15",
-  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1014&context=early_visions_bucket"
+  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1014&context=early_visions_bucket",
+  "comp": "unlabeled",
+  "pages": 5,
+  "cnote": "",
+  "fullText": []
  },
  {
   "id": 18,
@@ -105,7 +190,24 @@ window.ITEMS = [
   "tier": "A",
   "why": "English visit to the Fort Caroline area and the Timucua.",
   "page": "https://digitalcommons.usf.edu/early_visions_bucket/18",
-  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1017&context=early_visions_bucket"
+  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1017&context=early_visions_bucket",
+  "comp": "excerpt",
+  "pages": 8,
+  "cnote": "",
+  "fullText": [
+   {
+    "label": "Sparke's account, 22-page PDF (American Journeys)",
+    "url": "https://americanjourneys.org/aj-030/",
+    "conf": 85,
+    "note": "Probably the full voyage narrative."
+   },
+   {
+    "label": "Hakluyt, Principal Navigations vol. 10 (Internet Archive)",
+    "url": "https://www.archive.org/download/principalnavigat10hakl/principalnavigat10hakl_bw.pdf",
+    "conf": 75,
+    "note": "Large PDF; Hawkins voyages are in the front matter list."
+   }
+  ]
  },
  {
   "id": 6,
@@ -117,7 +219,18 @@ window.ITEMS = [
   "tier": "A",
   "why": "French cosmographer on the Americas; secondhand in places.",
   "page": "https://digitalcommons.usf.edu/early_visions_bucket/6",
-  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1005&context=early_visions_bucket"
+  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1005&context=early_visions_bucket",
+  "comp": "excerpt",
+  "pages": 5,
+  "cnote": "",
+  "fullText": [
+   {
+    "label": "1568 English text (EEBO-TCP via Univ. of Michigan)",
+    "url": "http://name.umdl.umich.edu/A13665.0001.001",
+    "conf": 80,
+    "note": "Full transcription of the 1568 translation."
+   }
+  ]
  },
  {
   "id": 17,
@@ -129,7 +242,11 @@ window.ITEMS = [
   "tier": "B",
   "why": "Spanish triumph narrative.",
   "page": "https://digitalcommons.usf.edu/early_visions_bucket/17",
-  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1016&context=early_visions_bucket"
+  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1016&context=early_visions_bucket",
+  "comp": "unlabeled",
+  "pages": 19,
+  "cnote": "",
+  "fullText": []
  },
  {
   "id": 14,
@@ -141,7 +258,24 @@ window.ITEMS = [
   "tier": "A",
   "why": "Seventeen years among the Calusa.",
   "page": "https://digitalcommons.usf.edu/early_visions_bucket/14",
-  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1013&context=early_visions_bucket"
+  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1013&context=early_visions_bucket",
+  "comp": "excerpt",
+  "pages": 9,
+  "cnote": "",
+  "fullText": [
+   {
+    "label": "Buckingham Smith 1854 translation (thenewworld.us)",
+    "url": "https://thenewworld.us/?p=297",
+    "conf": 75,
+    "note": "Transcription of Smith's translation; scholars question Smith's version (Ferdinando 2010, FHQ)."
+   },
+   {
+    "label": "Same translation (Keys History)",
+    "url": "https://keyshistory.org/Fontenada.html",
+    "conf": 70,
+    "note": ""
+   }
+  ]
  },
  {
   "id": 16,
@@ -153,7 +287,18 @@ window.ITEMS = [
   "tier": "A",
   "why": "Huguenot survivor account of the Fort Caroline massacre.",
   "page": "https://digitalcommons.usf.edu/early_visions_bucket/16",
-  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1015&context=early_visions_bucket"
+  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1015&context=early_visions_bucket",
+  "comp": "excerpt",
+  "pages": 10,
+  "cnote": "Excerpts of the prose Discours plus two poems.",
+  "fullText": [
+   {
+    "label": "1579 French edition scan (Utrecht Univ. Library)",
+    "url": "https://objects.library.uu.nl/reader/1874-430010/metadata?lan=en",
+    "conf": 65,
+    "note": "French; I saw the catalog record, not the page images."
+   }
+  ]
  },
  {
   "id": 19,
@@ -165,7 +310,24 @@ window.ITEMS = [
   "tier": "A",
   "why": "French colony at Fort Caroline and the Timucua.",
   "page": "https://digitalcommons.usf.edu/early_visions_bucket/19",
-  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1018&context=early_visions_bucket"
+  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1018&context=early_visions_bucket",
+  "comp": "excerpt",
+  "pages": 8,
+  "cnote": "",
+  "fullText": [
+   {
+    "label": "Hakluyt 1587 English (Oxford Text Archive record)",
+    "url": "https://oer.tamiu.edu/itemRecord.php?id=170288",
+    "conf": 50,
+    "note": "Catalog page for the TCP text; text itself not opened."
+   },
+   {
+    "label": "French edition, Paris 1853 (Library of Congress)",
+    "url": "https://www.loc.gov/item/2021667019/",
+    "conf": 75,
+    "note": "French."
+   }
+  ]
  },
  {
   "id": 3,
@@ -177,7 +339,11 @@ window.ITEMS = [
   "tier": "C",
   "why": "Verse chronicle.",
   "page": "https://digitalcommons.usf.edu/early_visions_bucket/3",
-  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1002&context=early_visions_bucket"
+  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1002&context=early_visions_bucket",
+  "comp": "partial",
+  "pages": 9,
+  "cnote": "Abstract says the poem is selectively anthologized for its Fountain of Youth passage.",
+  "fullText": []
  },
  {
   "id": 25,
@@ -186,10 +352,14 @@ window.ITEMS = [
   "author": "Alonso Gregorio de Escobedo",
   "contrib": "Mikaela Perron, Thomas B. Hallock",
   "genre": "Poem",
-  "tier": "C",
-  "why": "Verse about Florida; may still describe peoples.",
+  "tier": "B",
+  "why": "Religious meditation on Native Americans (USF abstract); verse, but about Native people.",
   "page": "https://digitalcommons.usf.edu/early_visions_bucket/25",
-  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1024&context=early_visions_bucket"
+  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1024&context=early_visions_bucket",
+  "comp": "unlabeled",
+  "pages": null,
+  "cnote": "",
+  "fullText": []
  },
  {
   "id": 4,
@@ -201,7 +371,18 @@ window.ITEMS = [
   "tier": "B",
   "why": "Official chronicle; compiles earlier sources.",
   "page": "https://digitalcommons.usf.edu/early_visions_bucket/4",
-  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1003&context=early_visions_bucket"
+  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1003&context=early_visions_bucket",
+  "comp": "excerpt",
+  "pages": 7,
+  "cnote": "Two selections: overview of the Indies, and Ponce de Leon's Florida expeditions.",
+  "fullText": [
+   {
+    "label": "Spanish original, Decada primera (Univ. of Granada scan)",
+    "url": "https://digibug.ugr.es/handle/10481/3579",
+    "conf": 70,
+    "note": "Spanish only; not checked for which chapters."
+   }
+  ]
  },
  {
   "id": 11,
@@ -213,7 +394,18 @@ window.ITEMS = [
   "tier": "A",
   "why": "De Soto expedition narrative drawing on survivor testimony.",
   "page": "https://digitalcommons.usf.edu/early_visions_bucket/11",
-  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1010&context=early_visions_bucket"
+  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1010&context=early_visions_bucket",
+  "comp": "excerpt",
+  "pages": 13,
+  "cnote": "",
+  "fullText": [
+   {
+    "label": "Shelby translation in The De Soto Chronicles (Project MUSE)",
+    "url": "https://muse.jhu.edu/books/9780817384616/9780817384616-52.pdf",
+    "conf": 30,
+    "note": "Search showed only a preview excerpt; probably paywalled. No free full text found."
+   }
+  ]
  },
  {
   "id": 2,
@@ -225,7 +417,11 @@ window.ITEMS = [
   "tier": "C",
   "why": "Literary.",
   "page": "https://digitalcommons.usf.edu/early_visions_bucket/2",
-  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1001&context=early_visions_bucket"
+  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1001&context=early_visions_bucket",
+  "comp": "partial",
+  "pages": 10,
+  "cnote": "Abstract says the text is excerpted here.",
+  "fullText": []
  },
  {
   "id": 20,
@@ -235,9 +431,13 @@ window.ITEMS = [
   "contrib": "Leah Hart",
   "genre": "Poems",
   "tier": "C",
-  "why": "Verse from New France.",
+  "why": "Poem about Dominique de Gourgues' 1567 expedition (USF abstract); verse, not ethnography.",
   "page": "https://digitalcommons.usf.edu/early_visions_bucket/20",
-  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1019&context=early_visions_bucket"
+  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1019&context=early_visions_bucket",
+  "comp": "unlabeled",
+  "pages": null,
+  "cnote": "",
+  "fullText": []
  },
  {
   "id": 26,
@@ -247,9 +447,20 @@ window.ITEMS = [
   "contrib": "J. Michael Francis, Arielle Stevenson",
   "genre": "Excerpt",
   "tier": "A",
-  "why": "Franciscan account of mission-era Florida.",
+  "why": "Juanillo's Revolt (1597) and friar Francisco de Avila's roughly ten months of captivity (USF abstract).",
   "page": "https://digitalcommons.usf.edu/early_visions_bucket/26",
-  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1025&context=early_visions_bucket"
+  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1025&context=early_visions_bucket",
+  "comp": "excerpt",
+  "pages": 6,
+  "cnote": "",
+  "fullText": [
+   {
+    "label": "Geiger translation, whole book (Internet Archive)",
+    "url": "https://archive.org/details/martyrsofflorida00orel",
+    "conf": 85,
+    "note": "Scanned book, 182 pp."
+   }
+  ]
  },
  {
   "id": 30,
@@ -261,7 +472,18 @@ window.ITEMS = [
   "tier": "A",
   "why": "Timucua-language confession manual; reveals behaviors the friars targeted.",
   "page": "https://digitalcommons.usf.edu/early_visions_bucket/30",
-  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1029&context=early_visions_bucket"
+  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1029&context=early_visions_bucket",
+  "comp": "excerpt",
+  "pages": 9,
+  "cnote": "",
+  "fullText": [
+   {
+    "label": "Timucua texts online (Webonary Timucua project)",
+    "url": "https://www.webonary.org/timucua/overview/introduction/",
+    "conf": 60,
+    "note": "Project says all Timucua books are online; I did not confirm the 1613 Confessionario page."
+   }
+  ]
  },
  {
   "id": 31,
@@ -273,7 +495,11 @@ window.ITEMS = [
   "tier": "C",
   "why": "Sensational print.",
   "page": "https://digitalcommons.usf.edu/early_visions_bucket/31",
-  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1030&context=early_visions_bucket"
+  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1030&context=early_visions_bucket",
+  "comp": "unlabeled",
+  "pages": null,
+  "cnote": "",
+  "fullText": []
  },
  {
   "id": 29,
@@ -285,7 +511,11 @@ window.ITEMS = [
   "tier": "A",
   "why": "Ritual ball game and its fate under the missions.",
   "page": "https://digitalcommons.usf.edu/early_visions_bucket/29",
-  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1028&context=early_visions_bucket"
+  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1028&context=early_visions_bucket",
+  "comp": "excerpt",
+  "pages": 15,
+  "cnote": "",
+  "fullText": []
  },
  {
   "id": 9,
@@ -297,7 +527,18 @@ window.ITEMS = [
   "tier": "B",
   "why": "Advocacy account of conquest violence.",
   "page": "https://digitalcommons.usf.edu/early_visions_bucket/9",
-  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1008&context=early_visions_bucket"
+  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1008&context=early_visions_bucket",
+  "comp": "excerpt",
+  "pages": 3,
+  "cnote": "",
+  "fullText": [
+   {
+    "label": "1689 English translation (Project Gutenberg #20321)",
+    "url": "https://www.gutenberg.org/ebooks/20321",
+    "conf": 90,
+    "note": "Archaic 17th-century translation."
+   }
+  ]
  },
  {
   "id": 24,
@@ -305,11 +546,22 @@ window.ITEMS = [
   "title": "God's Protecting Providence",
   "author": "Jonathan Dickinson",
   "contrib": "Mikaela Perron",
-  "genre": "Excerpt",
+  "genre": "Memoir",
   "tier": "A",
-  "why": "Shipwreck and long journey among several Florida peoples.",
+  "why": "Shipwreck survivors' journey along the Atlantic coast (USF abstract); Lehigh's note calls it an ethnographic picture of coastal peoples.",
   "page": "https://digitalcommons.usf.edu/early_visions_bucket/24",
-  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1023&context=early_visions_bucket"
+  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1023&context=early_visions_bucket",
+  "comp": "unlabeled",
+  "pages": null,
+  "cnote": "USF lists no extent or excerpt label. Compare length with the full text.",
+  "fullText": [
+   {
+    "label": "1699 edition (Oxford Text Archive, EEBO-TCP)",
+    "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/N00716",
+    "conf": 80,
+    "note": "Full TCP transcription of the first edition."
+   }
+  ]
  },
  {
   "id": 27,
@@ -319,9 +571,13 @@ window.ITEMS = [
   "contrib": "Rachel Louise Sanderson",
   "genre": "Letters",
   "tier": "A",
-  "why": "Likely Apalachee leaders writing to the Crown; verify in the cover essay.",
+  "why": "Hinachuba letter in full plus partial passages from two other letters (USF abstract); keywords: Apalachee, conversion.",
   "page": "https://digitalcommons.usf.edu/early_visions_bucket/27",
-  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1026&context=early_visions_bucket"
+  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1026&context=early_visions_bucket",
+  "comp": "partial",
+  "pages": 5,
+  "cnote": "Hinachuba letter in full; the other two letters only in sections.",
+  "fullText": []
  },
  {
   "id": 28,
@@ -333,7 +589,11 @@ window.ITEMS = [
   "tier": "B",
   "why": "Military expedition journal.",
   "page": "https://digitalcommons.usf.edu/early_visions_bucket/28",
-  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1027&context=early_visions_bucket"
+  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1027&context=early_visions_bucket",
+  "comp": "unlabeled",
+  "pages": 13,
+  "cnote": "",
+  "fullText": []
  },
  {
   "id": 39,
@@ -341,11 +601,22 @@ window.ITEMS = [
   "title": "Narrative of the Uncommon Sufferings and Surprizing Deliverance of Briton Hammon",
   "author": "Briton Hammon",
   "contrib": "Gail Busjahn",
-  "genre": "Excerpt",
+  "genre": "Narrative",
   "tier": "A",
-  "why": "Early Black-authored narrative with an encounter with Florida Native people.",
+  "why": "Early Black-authored captivity narrative: shipwreck, captivity and enslavement in Florida and the Caribbean (USF abstract).",
   "page": "https://digitalcommons.usf.edu/early_visions_bucket/39",
-  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1038&context=early_visions_bucket"
+  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1038&context=early_visions_bucket",
+  "comp": "unlabeled",
+  "pages": null,
+  "cnote": "No extent listed; the 1760 original is only 14 pages, so this is probably whole.",
+  "fullText": [
+   {
+    "label": "Whole 1760 text (Documenting the American South)",
+    "url": "https://docsouth.unc.edu/neh/hammon/menu.html",
+    "conf": 95,
+    "note": ""
+   }
+  ]
  },
  {
   "id": 32,
@@ -357,7 +628,11 @@ window.ITEMS = [
   "tier": "A",
   "why": "Naturalist's diary with encounters with Native people.",
   "page": "https://digitalcommons.usf.edu/early_visions_bucket/32",
-  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1031&context=early_visions_bucket"
+  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1031&context=early_visions_bucket",
+  "comp": "unlabeled",
+  "pages": 9,
+  "cnote": "Not labeled an excerpt, but 9 pages looks short for a 9-month diary. My guess, ~55% confidence; check.",
+  "fullText": []
  },
  {
   "id": 40,
@@ -369,7 +644,11 @@ window.ITEMS = [
   "tier": "B",
   "why": "Colonial life memoir.",
   "page": "https://digitalcommons.usf.edu/early_visions_bucket/40",
-  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1039&context=early_visions_bucket"
+  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1039&context=early_visions_bucket",
+  "comp": "excerpt",
+  "pages": 5,
+  "cnote": "",
+  "fullText": []
  },
  {
   "id": 42,
@@ -381,7 +660,24 @@ window.ITEMS = [
   "tier": "B",
   "why": "Promotional British description of the colony.",
   "page": "https://digitalcommons.usf.edu/early_visions_bucket/42",
-  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1041&context=early_visions_bucket"
+  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1041&context=early_visions_bucket",
+  "comp": "excerpt",
+  "pages": 6,
+  "cnote": "",
+  "fullText": [
+   {
+    "label": "1769 edition (Wellcome Collection)",
+    "url": "https://wellcomecollection.org/works/vhcg6vgc",
+    "conf": 70,
+    "note": "Full text available per Wellcome's record."
+   },
+   {
+    "label": "1766 first edition (Internet Archive)",
+    "url": "https://archive.org/details/b30787683",
+    "conf": 70,
+    "note": ""
+   }
+  ]
  },
  {
   "id": 35,
@@ -393,7 +689,11 @@ window.ITEMS = [
   "tier": "B",
   "why": "British survey report; landscape and settlement.",
   "page": "https://digitalcommons.usf.edu/early_visions_bucket/35",
-  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1034&context=early_visions_bucket"
+  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1034&context=early_visions_bucket",
+  "comp": "excerpt",
+  "pages": 16,
+  "cnote": "",
+  "fullText": []
  },
  {
   "id": 33,
@@ -405,7 +705,11 @@ window.ITEMS = [
   "tier": "A",
   "why": "Earlier, shorter Bartram report; compare with 1791 Travels.",
   "page": "https://digitalcommons.usf.edu/early_visions_bucket/33",
-  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1032&context=early_visions_bucket"
+  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1032&context=early_visions_bucket",
+  "comp": "excerpt",
+  "pages": 30,
+  "cnote": "USF says excerpts; the printed edition runs about 120 pages (Trans. Amer. Philos. Soc. 33(2): 121-242).",
+  "fullText": []
  },
  {
   "id": 41,
@@ -417,7 +721,24 @@ window.ITEMS = [
   "tier": "A",
   "why": "Includes accounts of Southeastern peoples.",
   "page": "https://digitalcommons.usf.edu/early_visions_bucket/41",
-  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1040&context=early_visions_bucket"
+  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1040&context=early_visions_bucket",
+  "comp": "excerpt",
+  "pages": 15,
+  "cnote": "",
+  "fullText": [
+   {
+    "label": "Whole 1775 book (Internet Archive text)",
+    "url": "https://archive.org/stream/concisenaturalhi00roma/concisenaturalhi00roma_djvu.txt",
+    "conf": 90,
+    "note": "OCR text, rough."
+   },
+   {
+    "label": "Biodiversity Heritage Library scan",
+    "url": "https://www.biodiversitylibrary.org/bibliography/42232",
+    "conf": 90,
+    "note": ""
+   }
+  ]
  },
  {
   "id": 37,
@@ -429,7 +750,11 @@ window.ITEMS = [
   "tier": "C",
   "why": "Military celebration verse.",
   "page": "https://digitalcommons.usf.edu/early_visions_bucket/37",
-  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1036&context=early_visions_bucket"
+  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1036&context=early_visions_bucket",
+  "comp": "unlabeled",
+  "pages": 13,
+  "cnote": "",
+  "fullText": []
  },
  {
   "id": 38,
@@ -439,9 +764,26 @@ window.ITEMS = [
   "contrib": "Michelle Sonnenberg, Hannah Gorski",
   "genre": "Excerpt",
   "tier": "B",
-  "why": "Surveyor's description; check for Native settlements.",
+  "why": "Coastline and rivers (USF abstract); the included sections are Preface, Panhandle and Tortugas descriptions, Conclusion, table of distances.",
   "page": "https://digitalcommons.usf.edu/early_visions_bucket/38",
-  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1037&context=early_visions_bucket"
+  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1037&context=early_visions_bucket",
+  "comp": "excerpt",
+  "pages": 16,
+  "cnote": "The included sections are Preface, Panhandle and Tortugas descriptions, Conclusion, table of distances (per USF abstract).",
+  "fullText": [
+   {
+    "label": "Whole 1784 book, 94 pp (scan hosted by LSU)",
+    "url": "https://biotech.law.lsu.edu/blog/historicalnarrat00hutc.pdf",
+    "conf": 85,
+    "note": "Internet Archive scan."
+   },
+   {
+    "label": "Wellcome Collection copy",
+    "url": "https://wellcomecollection.org/works/mne4ub28",
+    "conf": 75,
+    "note": ""
+   }
+  ]
  },
  {
   "id": 34,
@@ -453,7 +795,24 @@ window.ITEMS = [
   "tier": "A",
   "why": "Naturalist's observations of Creek, Seminole, Cherokee, Choctaw lifeways.",
   "page": "https://digitalcommons.usf.edu/early_visions_bucket/34",
-  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1033&context=early_visions_bucket"
+  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1033&context=early_visions_bucket",
+  "comp": "excerpt",
+  "pages": 13,
+  "cnote": "",
+  "fullText": [
+   {
+    "label": "Whole 1791 Travels (Project Gutenberg #63678)",
+    "url": "https://www.gutenberg.org/ebooks/63678",
+    "conf": 95,
+    "note": "The 1794 London edition."
+   },
+   {
+    "label": "1791 Philadelphia edition (Documenting the American South)",
+    "url": "https://docsouth.unc.edu/nc/bartram/menu.html",
+    "conf": 95,
+    "note": ""
+   }
+  ]
  },
  {
   "id": 45,
@@ -465,7 +824,18 @@ window.ITEMS = [
   "tier": "C",
   "why": "Fiction; shows European imagination of Native Americans.",
   "page": "https://digitalcommons.usf.edu/early_visions_bucket/45",
-  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1044&context=early_visions_bucket"
+  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1044&context=early_visions_bucket",
+  "comp": "excerpt",
+  "pages": 12,
+  "cnote": "",
+  "fullText": [
+   {
+    "label": "Atala, English translation (Project Gutenberg #44427)",
+    "url": "https://www.gutenberg.org/ebooks/44427",
+    "conf": 85,
+    "note": "A different English translation than USF's; I did not compare."
+   }
+  ]
  },
  {
   "id": 44,
@@ -477,7 +847,11 @@ window.ITEMS = [
   "tier": "B",
   "why": "Shipwreck survivor account.",
   "page": "https://digitalcommons.usf.edu/early_visions_bucket/44",
-  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1043&context=early_visions_bucket"
+  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1043&context=early_visions_bucket",
+  "comp": "unlabeled",
+  "pages": 10,
+  "cnote": "",
+  "fullText": []
  },
  {
   "id": 50,
@@ -489,7 +863,11 @@ window.ITEMS = [
   "tier": "B",
   "why": "Captivity narrative; check how Native people are framed.",
   "page": "https://digitalcommons.usf.edu/early_visions_bucket/50",
-  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1049&context=early_visions_bucket"
+  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1049&context=early_visions_bucket",
+  "comp": "excerpt",
+  "pages": 10,
+  "cnote": "",
+  "fullText": []
  },
  {
   "id": 47,
@@ -501,7 +879,11 @@ window.ITEMS = [
   "tier": "C",
   "why": "Adventure writing.",
   "page": "https://digitalcommons.usf.edu/early_visions_bucket/47",
-  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1046&context=early_visions_bucket"
+  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1046&context=early_visions_bucket",
+  "comp": "unlabeled",
+  "pages": 20,
+  "cnote": "",
+  "fullText": []
  },
  {
   "id": 48,
@@ -513,7 +895,11 @@ window.ITEMS = [
   "tier": "B",
   "why": "Military view of Seminole country.",
   "page": "https://digitalcommons.usf.edu/early_visions_bucket/48",
-  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1047&context=early_visions_bucket"
+  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1047&context=early_visions_bucket",
+  "comp": "excerpt",
+  "pages": 9,
+  "cnote": "",
+  "fullText": []
  },
  {
   "id": 46,
@@ -525,7 +911,18 @@ window.ITEMS = [
   "tier": "B",
   "why": "Settler account of the Seminole War; read critically.",
   "page": "https://digitalcommons.usf.edu/early_visions_bucket/46",
-  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1045&context=early_visions_bucket"
+  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1045&context=early_visions_bucket",
+  "comp": "excerpt",
+  "pages": 5,
+  "cnote": "The original is a 24-page pamphlet (HSP catalog).",
+  "fullText": [
+   {
+    "label": "1836 pamphlet scan (DeGolyer Library, SMU)",
+    "url": "https://degolyer.omeka.net/exhibits/show/schimmel/item/1051",
+    "conf": 60,
+    "note": "Exhibit item; I did not open the scan."
+   }
+  ]
  },
  {
   "id": 51,
@@ -537,7 +934,11 @@ window.ITEMS = [
   "tier": "C",
   "why": "Seminole War-era poem.",
   "page": "https://digitalcommons.usf.edu/early_visions_bucket/51",
-  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1050&context=early_visions_bucket"
+  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1050&context=early_visions_bucket",
+  "comp": "unlabeled",
+  "pages": 3,
+  "cnote": "",
+  "fullText": []
  },
  {
   "id": 52,
@@ -549,7 +950,11 @@ window.ITEMS = [
   "tier": "C",
   "why": "Seminole War-era poem.",
   "page": "https://digitalcommons.usf.edu/early_visions_bucket/52",
-  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1051&context=early_visions_bucket"
+  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1051&context=early_visions_bucket",
+  "comp": "unlabeled",
+  "pages": 3,
+  "cnote": "USF offers 'Download Full Text', but that label appears on every item, including excerpts.",
+  "fullText": []
  },
  {
   "id": 49,
@@ -561,7 +966,11 @@ window.ITEMS = [
   "tier": "C",
   "why": "Romantic Florida verse.",
   "page": "https://digitalcommons.usf.edu/early_visions_bucket/49",
-  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1048&context=early_visions_bucket"
+  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1048&context=early_visions_bucket",
+  "comp": "unlabeled",
+  "pages": null,
+  "cnote": "",
+  "fullText": []
  },
  {
   "id": 53,
@@ -573,7 +982,11 @@ window.ITEMS = [
   "tier": "C",
   "why": "Seminole War memorial verse.",
   "page": "https://digitalcommons.usf.edu/early_visions_bucket/53",
-  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1052&context=early_visions_bucket"
+  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1052&context=early_visions_bucket",
+  "comp": "unlabeled",
+  "pages": 4,
+  "cnote": "",
+  "fullText": []
  },
  {
   "id": 43,
@@ -585,7 +998,11 @@ window.ITEMS = [
   "tier": "C",
   "why": "Not about Indigenous peoples; Florida context only.",
   "page": "https://digitalcommons.usf.edu/early_visions_bucket/43",
-  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1042&context=early_visions_bucket"
+  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1042&context=early_visions_bucket",
+  "comp": "unlabeled",
+  "pages": null,
+  "cnote": "",
+  "fullText": []
  },
  {
   "id": 54,
@@ -597,6 +1014,10 @@ window.ITEMS = [
   "tier": "C",
   "why": "Literary memory of the Seminole leader; reception, not ethnography.",
   "page": "https://digitalcommons.usf.edu/early_visions_bucket/54",
-  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1053&context=early_visions_bucket"
+  "pdf": "https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1053&context=early_visions_bucket",
+  "comp": "unlabeled",
+  "pages": 2,
+  "cnote": "",
+  "fullText": []
  }
 ];
