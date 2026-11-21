@@ -56,6 +56,15 @@ textarea{width:100%;min-height:90px;resize:vertical}
 .panel{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:16px;margin-bottom:14px}
 .panel h2{margin:0 0 6px;font-size:1.1rem;color:var(--gold)}
 .hidden{display:none}
+.badge{font:600 .72rem/1 system-ui,sans-serif;padding:4px 8px;border-radius:12px;border:1px solid}
+.badge.excerpt{color:#f1b36a;border-color:#a8672a;background:#3a2410}
+.badge.partial{color:#e6d27a;border-color:#8a7a2a;background:#352f12}
+.badge.unlabeled{color:var(--dim);border-color:var(--line)}
+.cnote{margin:6px 0 0;font-size:.85rem;color:#e0b98a}
+.ft{margin:8px 0 0;font-size:.88rem}
+.ft b{color:var(--gold);font-weight:600}
+.ft .src{display:block;margin:2px 0}
+.ft .nt{color:var(--dim)}
 .toast{position:fixed;bottom:18px;right:18px;background:var(--panel2);border:1px solid var(--gold);padding:8px 12px;border-radius:6px;opacity:0;transition:.25s;pointer-events:none}
 .toast.on{opacity:1}
 </style>
@@ -63,7 +72,7 @@ textarea{width:100%;min-height:90px;resize:vertical}
 <body>
 <header>
   <h1>Early Visions of Florida — Reading Tracker</h1>
-  <p class="sub">50 primary-source excerpts from USF's <a href="https://digitalcommons.usf.edu/early_visions_bucket/" target="_blank" rel="noopener">Early Visions of Florida</a> collection. Track what you've read, keep notes, and export them.</p>
+  <p class="sub">50 items from USF's <a href="https://digitalcommons.usf.edu/early_visions_bucket/" target="_blank" rel="noopener">Early Visions of Florida</a> collection. Track what you've read, keep notes, and export them.</p>
 </header>
 <div class="wrap">
   <div class="tabs">
@@ -82,6 +91,8 @@ textarea{width:100%;min-height:90px;resize:vertical}
       <input type="search" id="q" placeholder="Search title, author, notes, peoples...">
       <select id="fTier"><option value="">All tiers</option><option value="A">A · Core (Indigenous peoples)</option><option value="B">B · Context</option><option value="C">C · Literature &amp; reception</option></select>
       <select id="fStatus"><option value="">Any status</option><option value="unread">Unread</option><option value="reading">Reading</option><option value="read">Read</option><option value="star">Starred</option></select>
+      <select id="fComp"><option value="">Any completeness</option><option value="excerpt">Labeled excerpt</option><option value="partial">Partly excerpted</option><option value="unlabeled">Not labeled as excerpt</option></select>
+      <select id="fFt"><option value="">Full text: any</option><option value="yes">Has full-text link</option><option value="no">No full-text link found</option></select>
       <select id="sort"><option value="old">Oldest first</option><option value="new">Newest first</option><option value="tier">Tier, then oldest</option></select>
       <button id="btnExport">Export notes</button>
       <button id="btnImport">Import</button>
@@ -111,7 +122,9 @@ textarea{width:100%;min-height:90px;resize:vertical}
         <li><b>Years</b> are as listed on the USF page; they may be publication or event dates, not both (for example, the Cabeza de Vaca joint report is filed under 1527).</li>
         <li><b>Tiers</b> (A/B/C) are a triage for researching Indigenous peoples and their relationships. They are not part of USF's catalog and can be wrong.</li>
         <li><b>Contributors</b> are the other names listed on each USF record. They look like editors, translators or student introducers; check the PDF.</li>
-        <li>Each text is an excerpt, mostly European-authored. Consider who is speaking and for whom.</li>
+        <li><b>Excerpt labels</b> come from each USF item page: "Excerpt" in the title or Media Type "Excerpts" means USF says it is partial. "Not labeled as excerpt" means USF does not say, <i>not</i> that it is whole. USF's "Download Full Text" button appears on every item and means nothing about completeness. Page counts are USF's.</li>
+        <li><b>Full-text links</b> were found by web search on 2026-11-20 and not all were opened. Each shows a link confidence. Different editions and translations may not match USF's text; compare before citing.</li>
+        <li>Most texts are European-authored. Consider who is speaking and for whom.</li>
         <li>Notes are stored in your browser only (localStorage). Use <b>Export notes</b> to back them up or move between devices.</li>
       </ul></div>
   </section>
@@ -128,6 +141,12 @@ textarea{width:100%;min-height:90px;resize:vertical}
   function toast(m){var t=document.getElementById("toast");t.textContent=m;t.className="toast on";setTimeout(function(){t.className="toast";},1800);}
   function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];});}
   function st(id){return state.items[id]||(state.items[id]={status:"unread",star:false,notes:"",peoples:"",quotes:"",conf:""});}
+  var compName={excerpt:"EXCERPT",partial:"PARTLY EXCERPTED",unlabeled:"Not labeled as excerpt"};
+  function ftHtml(it){
+    if(!it.fullText||!it.fullText.length)return '<div class="ft"><b>Full text:</b> <span class="nt">no free full text found yet</span></div>';
+    return '<div class="ft"><b>Fuller / full text:</b>'+it.fullText.map(function(f){
+      return '<span class="src"><a href="'+esc(f.url)+'" target="_blank" rel="noopener">'+esc(f.label)+'</a> <span class="nt">· link confidence '+f.conf+'%'+(f.note?' · '+esc(f.note):'')+'</span></span>';}).join("")+'</div>';
+  }
   var tierName={A:"A · Core",B:"B · Context",C:"C · Literature"};
   var $=function(id){return document.getElementById(id);};
 
@@ -136,11 +155,14 @@ textarea{width:100%;min-height:90px;resize:vertical}
       "Early Visions of Florida, USF Digital Commons ("+it.year+" as listed). "+it.page;
   }
   function filtered(){
-    var q=$("q").value.toLowerCase().trim(), ft=$("fTier").value, fs=$("fStatus").value, so=$("sort").value;
+    var q=$("q").value.toLowerCase().trim(), ft=$("fTier").value, fs=$("fStatus").value, fc=$("fComp").value, ff=$("fFt").value, so=$("sort").value;
     var out=window.ITEMS.filter(function(it){
       var s=st(it.id);
       if(ft&&it.tier!==ft)return false;
       if(fs==="star"){if(!s.star)return false;} else if(fs&&s.status!==fs)return false;
+      if(fc&&it.comp!==fc)return false;
+      if(ff==='yes'&&!(it.fullText&&it.fullText.length))return false;
+      if(ff==='no'&&it.fullText&&it.fullText.length)return false;
       if(q){var hay=(it.title+" "+it.author+" "+it.contrib+" "+it.why+" "+s.notes+" "+s.peoples+" "+s.quotes).toLowerCase();if(hay.indexOf(q)<0)return false;}
       return true;
     });
@@ -162,13 +184,13 @@ textarea{width:100%;min-height:90px;resize:vertical}
     box.innerHTML=list.map(function(it){
       var s=st(it.id);
       return '<article class="card '+it.tier+(s.status==="read"?" read":"")+'" data-id="'+it.id+'">'+
-        '<div class="row"><span class="year">'+it.year+'</span><span class="chip '+it.tier+'">'+tierName[it.tier]+'</span><span class="chip">'+esc(it.genre)+'</span>'+
+        '<div class="row"><span class="year">'+it.year+'</span><span class="chip '+it.tier+'">'+tierName[it.tier]+'</span><span class="chip">'+esc(it.genre)+'</span><span class="badge '+it.comp+'">'+compName[it.comp]+(it.pages?' · '+it.pages+' pp':'')+'</span>'+
         '<span style="flex:1"></span>'+
         '<button class="star'+(s.star?" on":"")+'" data-act="star" title="Star">★</button>'+
         '<select data-act="status"><option value="unread"'+(s.status==="unread"?" selected":"")+'>Unread</option><option value="reading"'+(s.status==="reading"?" selected":"")+'>Reading</option><option value="read"'+(s.status==="read"?" selected":"")+'>Read</option></select></div>'+
         '<h3>'+esc(it.title)+'</h3><div class="by">'+esc(it.author)+(it.contrib?' · <span class="small">with '+esc(it.contrib)+'</span>':'')+'</div>'+
-        '<p class="why">'+esc(it.why)+'</p>'+
-        '<div class="links"><a href="'+it.page+'" target="_blank" rel="noopener">Item page</a><a href="'+it.pdf+'" target="_blank" rel="noopener">PDF</a><a href="#" data-act="cite">Copy citation</a></div>'+
+        '<p class="why">'+esc(it.why)+'</p>'+(it.cnote?'<p class="cnote">'+esc(it.cnote)+'</p>':'')+
+        ftHtml(it)+'<div class="links"><a href="'+it.page+'" target="_blank" rel="noopener">Item page</a><a href="'+it.pdf+'" target="_blank" rel="noopener">PDF</a><a href="#" data-act="cite">Copy citation</a></div>'+
         '<details'+((s.notes||s.peoples||s.quotes||s.conf)?' open':'')+'><summary>Notes'+((s.notes||s.peoples||s.quotes)?' •':'')+'</summary>'+
         '<div class="grid2"><div><label>Peoples / places named</label><input class="full" data-f="peoples" value="'+esc(s.peoples)+'" placeholder="e.g., Timucua, Calusa"></div>'+
         '<div><label>Confidence in source reliability (0–100%)</label><input class="full" data-f="conf" type="number" min="0" max="100" value="'+esc(s.conf)+'"></div></div>'+
@@ -193,7 +215,7 @@ textarea{width:100%;min-height:90px;resize:vertical}
     var f=e.target.getAttribute("data-f");if(!f)return;
     var card=e.target.closest(".card");st(+card.getAttribute("data-id"))[f]=e.target.value;save();stats(filtered());
   });
-  ["q","fTier","fStatus","sort"].forEach(function(id){$(id).addEventListener("input",render);});
+  ["q","fTier","fStatus","fComp","fFt","sort"].forEach(function(id){$(id).addEventListener("input",render);});
   $("logText").addEventListener("input",function(e){state.log=e.target.value;save();});
   $("questions").addEventListener("input",function(e){state.questions=e.target.value;save();});
   document.querySelectorAll(".tab").forEach(function(b){b.addEventListener("click",function(){

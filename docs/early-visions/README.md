@@ -12,3 +12,7 @@ Tiers (A/B/C) are a triage for studying Indigenous peoples and their relationshi
 Years are as listed on the USF page.
 
 Files: `index.html`, `data.js` (the 50 items). No build step.
+
+
+## Completeness labels and full-text links
+Each card shows whether USF labels the item an excerpt (from its item page), the page count USF lists, and links to fuller texts found by web search (with a link-confidence %). "Not labeled as excerpt" means USF does not say, not that the text is whole.
